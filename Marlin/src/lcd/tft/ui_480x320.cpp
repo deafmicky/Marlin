@@ -796,6 +796,7 @@ static void drawBtn(int x, int y, const char *label, intptr_t data, MarlinImage 
 }
 
 void MarlinUI::move_axis_screen() {
+  defer_status_screen(true);
   // Reset
   defer_status_screen(true);
   motionAxisState.blocked = false;
